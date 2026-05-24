@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Магазин консолей — NetCity Play</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1 class="brand__title">NetCity Play</h1>
+        <p class="brand__tag">Игровые консоли для вас</p>
+      </div>
+      <nav class="toolbar">
+        <button id="notifications" class="btn">Уведомления о новинках</button>
+        <a href="order.html" class="btn">Оформить заказ</a>
+        <a href="my_orders.html" class="btn">Мои заказы</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container layout">
+      <section class="seasonalPromo">
+        <!-- fill with promoContent -->
+      </section>
+      <section class="catalog">
+        <h2 id="catalog-heading" class="visually-hidden">Каталог</h2>
+        <ul class="products">
+          <li class="item NK">
+            <article class="card">
+              <header class="card__head">
+                <h3 class="card__title console_name">Nikendo Swatch 2078</h3>
+                <div class="badges">
+                  <span class="badge badge--nk">NK</span>
+                  <span class="badge badge--new">Новая 🚀</span>
+                </div>
+              </header>
+              <figure class="card__media">
+                <img src="pic0.png" alt="Nikendo Swatch 2078">
+              </figure>
+              <div class="card__body">
+                <ul class="features">
+                  <li>Рендер 4K</li>
+                  <li>Мобильное управление</li>
+                  <li>ИИ-помощник</li>
+                </ul>
+              </div>
+              <footer class="card__foot">
+                <p class="price-row">
+                  <span class="currency">$</span>
+                  <span class="price">999.99</span>
+                </p>
+                <button class="buy btn btn-accent">Купить</button>
+              </footer>
+            </article>
+          </li>
+
+          <li class="item PS">
+            <article class="card">
+              <header class="card__head">
+                <h3 class="card__title console_name">PlaiStation 6</h3>
+                <div class="badges">
+                  <span class="badge badge--ps">PS</span>
+                </div>
+              </header>
+              <figure class="card__media">
+                <img src="pic1.png" alt="PlaiStation 6">
+              </figure>
+              <div class="card__body">
+                <ul class="features">
+                  <li>SSD 1 ТБ</li>
+                  <li>Рендер 1440p</li>
+                  <li>Геймпад DoubleTouch++</li>
+                </ul>
+              </div>
+              <footer class="card__foot">
+                <p class="price-row">
+                  <span class="currency">$</span>
+                  <span class="price">399.99</span>
+                </p>
+                <button class="buy btn btn-accent">Купить</button>
+              </footer>
+            </article>
+          </li>
+
+          <li class="item ST">
+            <article class="card">
+              <header class="card__head">
+                <h3 class="card__title console_name">StemaDock</h3>
+                <div class="badges">
+                  <span class="badge badge--st">ST</span>
+                </div>
+              </header>
+              <figure class="card__media">
+                <img src="pic2.png" alt="StemaDock">
+              </figure>
+              <div class="card__body">
+                <ul class="features">
+                  <li>QLED-дисплей</li>
+                  <li>Ray Tracing</li>
+                  <li>SSD 1 ТБ</li>
+                </ul>
+              </div>
+              <footer class="card__foot">
+                <p class="price-row">
+                  <span class="currency">$</span>
+                  <span class="price">499.99</span>
+                </p>
+                <button class="buy btn btn-accent">Купить</button>
+              </footer>
+            </article>
+          </li>
+
+          <li class="item NK">
+            <article class="card">
+              <header class="card__head">
+                <h3 class="card__title console_name">Nikendo Swatch</h3>
+                <div class="badges">
+                  <span class="badge badge--nk">NK</span>
+                  <!-- <span class="badge badge--discount">-40%</span> -->
+                </div>
+              </header>
+              <figure class="card__media">
+                <img src="pic3.png" alt="Nikendo Swatch">
+              </figure>
+              <div class="card__body">
+                <ul class="features">
+                  <li>OLED-дисплей</li>
+                  <li>Гибридный режим</li>
+                  <li>128 ГБ</li>
+                </ul>
+              </div>
+              <footer class="card__foot">
+                <p class="price-row">
+                  <span class="currency">$</span>
+                  <span class="price">249.99</span>
+                </p>
+                <button class="buy btn btn-accent">Купить</button>
+              </footer>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 2.1.2. Задача «Список отзывов 2» -- 3 мин -->
+      <section class="reviews"></section>
+      <!-- /2.1.2. Задача «Список отзывов 2» -- 3 мин -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025. NetCity Play</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

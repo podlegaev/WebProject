@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ваш заказ — NetCity Play</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1 class="brand__title">NetCity Play</h1>
+        <p class="brand__tag">Игровые консоли для вас</p>
+      </div>
+      <nav class="toolbar">
+        <a href="index.html" class="btn">На главную</a>
+        <a href="my_orders.html" class="btn">Мои заказы</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container layout">
+      <section class="summary">
+        <h2 id="summary-heading">Ваш заказ</h2>
+
+        <form id="order">
+          <div class="field">
+            <label for="item_name">Название</label>
+            <input type="text" id="item_name" name="item_name" placeholder="Например, Plaistation 6">
+          </div>
+
+          <div class="field">
+            <label for="item_amount">Количество</label>
+            <input type="number" id="item_amount" name="item_amount" placeholder="1">
+          </div>
+
+          <button type="submit" class="btn">Заказать</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025. NetCity Play</small>
+    </div>
+  </footer>
+
+  <!-- 1.2.6. Задача «Страница оформления заказа» -->
+  <script src="app2.js"></script>
+  <!-- /1.2.6. Задача «Страница оформления заказа» -->
+</body>
+
+</html>

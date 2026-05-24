@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 100% -20%, #1a1f2b 0%, transparent 60%) fixed,
+    radial-gradient(800px 400px at -10% 100%, #1b263b 0%, transparent 60%) fixed,
+    #0f1115 fixed;
+  color: #e6eaf2;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.site-header {
+  border-bottom: 1px solid #212633;
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(15, 17, 21, 0.8);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content:
+    space-between;
+  gap: 16px;
+}
+
+.brand__title {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+
+.brand__tag {
+  margin: 2px 0 0;
+  color: #9aa4b2;
+  font-size: 12px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+}
+
+a.btn {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid #212633;
+  background: #12151b;
+  color: #e6eaf2;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 160ms ease, transform 80ms ease, border-color 160ms ease;
+}
+
+.btn:hover {
+  background: #151922;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn-accent {
+  border-color: rgba(110, 231, 183, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(110, 231, 183, 0.12);
+}
+
+.btn-accent:hover {
+  background: rgba(110, 231, 183, 0.08);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.products {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.item {
+  border-radius: 16px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border: 1px solid #212633;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.orders {
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order.card {
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 14px 0 14px;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 11px;
+  border: 1px solid #212633;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #9aa4b2;
+}
+
+.badge--ps {
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.badge--nk {
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.35);
+}
+
+.badge--st {
+  color: #9471f4;
+  border-color: rgba(148, 113, 244, 0.35);
+}
+
+.badge--discount {
+  color: #c8f471;
+  border-color: rgba(200, 244, 113, 0.5);
+}
+
+.badge--new {
+  color: #f4a571;
+  border-color: rgba(244, 165, 113, 0.5);
+}
+
+.card__media {
+  padding: 12px 14px;
+}
+
+.card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px dashed #212633;
+}
+
+.card__body {
+  padding: 0 14px 8px 14px;
+}
+
+.features {
+  margin: 0;
+  padding: 0 0 0 16px;
+  color: #9aa4b2;
+  font-size: 14px;
+}
+
+.card__foot {
+  padding: 12px 14px 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid #212633;
+}
+
+.price-row {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.price {
+  font-variant-numeric: tabular-nums;
+}
+
+.currency {
+  color: #9aa4b2;
+  font-size: 12px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar .summary {
+  position: sticky;
+  top: 72px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border: 1px solid #212633;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.seasonalPromo {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border: 1px solid #212633;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.seasonalPromo {
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.35);
+}
+
+.summary h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+form {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* min-height: 76px; */
+}
+
+#order label {
+  font-size: 14px;
+}
+
+#order label::after {
+  content: ':';
+}
+
+#order input {
+  appearance: none;
+  border: 1px solid #212633;
+  background: #12151b;
+  color: #e6eaf2;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+#order .btn {
+  margin-top: 8px;
+}
+
+.msg {
+  min-height: 20px;
+  color: #9aa4b2;
+}
+
+.filter-active {
+  background-color: #34d399 !important;
+  color: #0b0f14 !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.PS-highlight {
+  background-color: rgba(250, 204, 21, 0.08) !important;
+  border-color: #facc15 !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.site-footer {
+  border-top: 1px solid #212633;
+  margin-top: 24px;
+}
+
+.site-footer .container {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  color: #9aa4b2;
+  font-size: 12px;
+}
+
+.review {
+  border: 1px solid #345;
+  width: 250px;
+  padding: 20px;
+}
+
+.reviews {
+  display: flex;
+  gap: 16px;
+}
+
+.review {
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 0 250px;
+}
+
+.review-author,
+.review-rate {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 2.1.2. Задача «Мои заказы 2» */
+.order {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  border: 1px solid #212633;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 12px;
+}
